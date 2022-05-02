@@ -14,7 +14,7 @@ class CoppelApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.yellow,
         ), //tema color global
-        home: Paginainicial());
+        home: const MyHomePage());
   }
 } //widget sin estado
 

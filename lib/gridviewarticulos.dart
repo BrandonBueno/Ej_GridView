@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Paginainicial());
+  runApp(MyApp());
 }
 
-class Paginainicial extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,17 +13,17 @@ class Paginainicial extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.yellow,
         ), //tema color global
-        home: const MyHomePage());
+        home: const Paginainicial());
   }
 } //widget sin estado
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class Paginainicial extends StatefulWidget {
+  const Paginainicial({Key? key}) : super(key: key);
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _PaginainicialState createState() => _PaginainicialState();
 } //widget con estado
 
-class _MyHomePageState extends State<MyHomePage> {
+class _PaginainicialState extends State<Paginainicial> {
   List<String> images = [
     "assets/images/img1.jpg",
     "assets/images/img2.jpg",
@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Coppel"),
+          title: const Text("Listado de productos"),
         ),
         body: GridView.custom(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
