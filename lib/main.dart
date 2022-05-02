@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:Bueno/gridviewarticulos.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(CoppelApp());
 }
 
-class MyApp extends StatelessWidget {
+class CoppelApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.yellow,
         ), //tema color global
-        home: const MyHomePage());
+        home: Paginainicial());
   }
 } //widget sin estado
 
